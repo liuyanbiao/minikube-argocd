@@ -1,7 +1,6 @@
 apiVersion: v1
 kind: Service
 metadata:
-  creationTimestamp: "2024-01-21T11:39:21Z"
   labels:
     app.kubernetes.io/instance: ngnix
     app.kubernetes.io/managed-by: Helm
@@ -10,17 +9,7 @@ metadata:
     helm.sh/chart: nginx-15.9.0
   name: my-release-nginx-ext
   namespace: nginx
-  resourceVersion: "224583"
-  uid: 37b48555-abd9-4d9f-9a69-df4b72ccc587
 spec:
-  clusterIP: 10.102.95.31
-  clusterIPs:
-  - 10.102.95.31
-  externalTrafficPolicy: Cluster
-  internalTrafficPolicy: Cluster
-  ipFamilies:
-  - IPv4
-  ipFamilyPolicy: SingleStack
   ports:
   - nodePort: 30578
     port: 80
@@ -29,6 +18,5 @@ spec:
   selector:
     app.kubernetes.io/instance: my-release
     app.kubernetes.io/name: nginx
-  sessionAffinity: None
   type: NodePort
 
