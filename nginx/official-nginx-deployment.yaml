@@ -51,7 +51,7 @@ metadata:
     app.kubernetes.io/version: 1.25.3
     helm.sh/chart: nginx-15.9.0
 spec:
-  replicas: 30
+  replicas: 1
   revisionHistoryLimit: 10
   strategy:
     rollingUpdate: {}
